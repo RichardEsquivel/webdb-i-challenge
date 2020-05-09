@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const knex = require('../data/dbConfig.js');
-
+//We will utilize knex to communicate with the SQL database
 router.get('/', (req, res) => {
 	knex.select('*')
 		.from('accounts')
